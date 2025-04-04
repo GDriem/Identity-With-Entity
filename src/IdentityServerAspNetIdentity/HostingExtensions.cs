@@ -31,11 +31,12 @@ internal static class HostingExtensions
                 // see https://docs.duendesoftware.com/identityserver/v6/fundamentals/resources/
                 options.EmitStaticAudienceClaim = true;
             })
-            .AddInMemoryIdentityResources(Config.IdentityResources)
-            .AddInMemoryApiScopes(Config.ApiScopes)
-            .AddInMemoryClients(Config.Clients)
-            .AddAspNetIdentity<ApplicationUser>();
-        
+             .AddInMemoryIdentityResources(Config.IdentityResources)
+             .AddInMemoryApiScopes(Config.ApiScopes)
+             .AddInMemoryClients(Config.Clients)
+             .AddAspNetIdentity<ApplicationUser>()
+             .AddProfileService<CustomProfileService>();
+
         builder.Services.AddAuthentication()
             .AddGoogle(options =>
             {
