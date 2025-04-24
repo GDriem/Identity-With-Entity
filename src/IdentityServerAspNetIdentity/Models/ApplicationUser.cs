@@ -10,4 +10,5 @@ namespace IdentityServerAspNetIdentity.Models;
 public class ApplicationUser : IdentityUser
 {
     public string FavoriteColor { set; get; }
+    public string Company { set; get; }
 }

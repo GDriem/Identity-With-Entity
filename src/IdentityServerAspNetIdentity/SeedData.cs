@@ -27,7 +27,8 @@ public class SeedData
                     UserName = "alice",
                     Email = "AliceSmith@email.com",
                     EmailConfirmed = true,
-                    FavoriteColor = "Pink"
+                    FavoriteColor = "Pink",
+                    Company = "GXS"
                 };
                 var result = userMgr.CreateAsync(alice, "Pass123$").Result;
                 if (!result.Succeeded)
@@ -60,7 +61,8 @@ public class SeedData
                     UserName = "bob",
                     Email = "BobSmith@email.com",
                     EmailConfirmed = true,
-                    FavoriteColor = "Blue"
+                    FavoriteColor = "Blue",
+                    Company = "GraphSource"
                 };
                 var result = userMgr.CreateAsync(bob, "Pass123$").Result;
                 if (!result.Succeeded)

@@ -11,7 +11,8 @@ public static class Config
         {
             new IdentityResources.OpenId(),
             new IdentityResources.Profile(),
-          new IdentityResource("color", new [] { "favorite_color" }),
+            new IdentityResource("color", new [] { "favorite_color" }),
+            new IdentityResource("company", new [] { "company" }),
         new IdentityResource()
             {
                 Name = "verification",
@@ -70,6 +71,7 @@ public static class Config
                     IdentityServerConstants.StandardScopes.Profile,
                     "verification",
                     "color",
+                    "company",
                     "api1",
                 }
             }
