@@ -1,6 +1,6 @@
 ﻿using Duende.IdentityServer;
 using Duende.IdentityServer.Models;
-using IdentityModel;
+using Duende.IdentityModel;
 
 namespace IdentityServerAspNetIdentity;
 
